@@ -35,11 +35,11 @@ var vetorDois = ["pão", 1, 2.56, false, undefined]
 Invoque a função criada acima, fazendo-a retornar todos os valores do último
 array criado.
 */
-retornarDadoMatriz(vetorDois,0)
-retornarDadoMatriz(vetorDois,1)
-retornarDadoMatriz(vetorDois,2)
-retornarDadoMatriz(vetorDois,3)
-retornarDadoMatriz(vetorDois,4)
+console.log(retornarDadoMatriz(vetorDois,0));
+console.log(retornarDadoMatriz(vetorDois,1));
+console.log(retornarDadoMatriz(vetorDois,2));
+console.log(retornarDadoMatriz(vetorDois,3));
+console.log(retornarDadoMatriz(vetorDois,4));
 
 /*
 Crie uma função chamada `book`, que recebe um parâmetro, que será o nome do
@@ -49,7 +49,7 @@ seguintes características:
 - cada uma dessas propriedades será um novo objeto, que terá outras 3
 propriedades:
     - `quantidadePaginas` - Number (quantidade de páginas)
-    - `autor` - String
+    - `autor` - String 
     - `editora` - String
 - A função deve retornar o objeto referente ao livro passado por parâmetro.
 - Se o parâmetro não for passado, a função deve retornar o objeto com todos
@@ -78,22 +78,7 @@ function book(nomeDoLivro){
 
     };
 
-    if(nomeDoLivro == 'Nineteen_Eighty_Four'){
-        return livro.Nineteen_Eighty_Four;
-
-    } else if (nomeDoLivro == 'The_Lion_The_Witch_and_the_Wardrobe'){
-        return livro.The_Lion_The_Witch_and_the_Wardrobe;
-
-    } else if (nomeDoLivro == 'livro_teste'){
-        return livro.livro_teste;
-
-    } else if (nomeDoLivro == undefined){
-        return livro;
-
-    } else{
-        return 'Este livro não foi encontrado';
-
-    }
+    return !nomeDoLivro ? livro : livro [nomeDoLivro];
 }
 
 /*
